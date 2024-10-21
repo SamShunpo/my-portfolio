@@ -1,0 +1,5 @@
+@import "../../styles/_variable.css";
+
+.portfolio-header {  
+    background-color: var(--colorWhite);
+}
