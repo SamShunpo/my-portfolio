@@ -3,7 +3,8 @@ import { createRoot } from 'react-dom/client'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
-import './index.css'
+import '../src/styles/index.scss'
+import "@fontsource/montserrat"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(

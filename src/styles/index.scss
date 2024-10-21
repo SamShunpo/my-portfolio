@@ -1,0 +1,18 @@
+@import "./variable";
+
+* {
+    font-family: $globalFont;
+}
+
+body,
+html,
+#root {
+    margin: 0;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
