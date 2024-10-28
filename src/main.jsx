@@ -1,3 +1,4 @@
+import "../src/styles/_variable.css"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Home from './pages/Home/Home'
