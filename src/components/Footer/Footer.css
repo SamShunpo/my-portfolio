@@ -1,0 +1,8 @@
+@import "../../styles/_variable.css";
+
+.copyright {
+    font-family: var(--textFont);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--colorGrey);
+}
