@@ -36,6 +36,12 @@ header {
     margin: auto;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
 span {
     font-family: var(--titleFont);
     color: var(--colorGrey);
