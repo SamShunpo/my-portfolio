@@ -1,0 +1,10 @@
+@import "../../styles/_variable.css";
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 0;
+    width: 100%;
+}
+
