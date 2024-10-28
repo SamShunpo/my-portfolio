@@ -1,19 +1,96 @@
 @import "./_variable.css";
 
-* {
-    font-family: Montserrat;
-}
-
 body,
 html,
 #root {
-    margin: 0;
     height: 100%;
+    width: 100%;
     background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    scroll-behavior: smooth;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 60px;
+    max-width: 1224px;
+    margin: auto;
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: solid 1px var(--colorGrey);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 76px;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 10px 60px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+span {
+    font-family: var(--titleFont);
+    color: var(--colorGrey);
+    height: fit-content;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+link,
+a {
+    color: var(--colorGrey);
+    font-family: var(--textFont);
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--titleFont);
+    font-size: 101px;
+    font-weight: 400;
+    line-height: 90%;
+    margin: 0;
+    max-width: 550px;
+}
+
+h2 {
+    font-family: var(--titleFont);
+    font-size: 76px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--textFont);
+    font-size: 32px;
+    font-weight: 500;
+}
+
+p {
+    font-family: var(--textFont);
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+    color: var(--colorGrey);
+}
+
+
+/* < 1024px */
+
+@media (max-width: 1024px) {
+    nav {
+        display: none;
+    }
 }

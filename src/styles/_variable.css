@@ -1,5 +1,8 @@
 :root {
     --colorBlack: #000000;
     --colorWhite: #ffffff;
-    --globalFont: Montserrat;
+    --colorGrey: #C7C7C7;
+    --actionColor: #D3E97A;
+    --titleFont: "Bebas Neue";
+    --textFont: "Manrope";
 }
