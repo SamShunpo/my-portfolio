@@ -1,42 +1,104 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "../../styles/_variable.css";
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 700px;
+    padding: 40px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-pic {
+    height: 700px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+img {
+    max-width: 400px;
+    max-height: 400px;
+    align-self: center;
 }
 
-.card {
-  padding: 2em;
+.rs {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
 
-.read-the-docs {
-  color: #888;
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 320px;
+    margin-top: 40px;
+}
+
+.button {
+    background-color: var(--actionColor);
+    border-radius: 100px;
+    padding: 15px 24px 15px 15px;
+    color: var(--colorBlack);
+    max-width: 190px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+}
+
+.about-link {
+    color: var(--actionColor);
+
+}
+
+.about-link-container {
+    border-bottom: 1px solid var(--actionColor);
+    width: fit-content;
+    height: 23px;
+}
+
+/* <1024px */
+
+@media (max-width: 1024px ) {
+
+    .hero {
+        justify-content: center;
+    }
+
+    .hero-left {
+        max-width: 100%;
+    }
 }
