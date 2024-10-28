@@ -30,7 +30,7 @@ function Home() {
         <section className='about-me'>
           <h2>A PROPOS DE MOI</h2>
           <div className='about'>
-            <h3>De Gérant de Bar à Architecte du Web</h3>
+            <h3>De Gérant de Bar à Développeur Lowcode</h3>
             <p>
               Après 15 ans à tirer des pintes et à gérer un bar à bière, j'ai décidé de changer de fût et de me lancer dans le code. Séduit dans un premier temps par le "no-code", j'ai vite réalisé que j'avais soif de plus. Maintenant formé en HTML, CSS et JavaScript, je mélange astucieusement no-code et code pour livrer des projets sur-mesure, avec la rapidité d'un service en happy hour. Envie d'en savoir plus ?
             </p>
