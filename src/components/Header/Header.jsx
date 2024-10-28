@@ -5,13 +5,14 @@ function Header() {
     const { pathname } = useLocation()
 
     return (
-        <header className='portfolio-header'>
-            <img src="" alt="" />
+        <header>
+            <span>Sam GLEIZE</span>
             <nav>
                 <Link to={pathname === "/" ? "#work" : "/#work"}>Work</Link>
                 <Link to="/about">About</Link>
-                <a href="">Contact</a>
+                <a href="#form">Contact</a>
             </nav>
+            <span className='toggle-icon'></span>
         </header>
     )
 

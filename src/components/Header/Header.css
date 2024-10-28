@@ -1,5 +1,15 @@
-@import "../../styles/_variable.css";
+.toggle-icon {
+    display: none;
+    background-image: url(../../assets/toggle.png) ;
+    width: 50px;
+    height: 50px;
+}
 
-.portfolio-header {  
-    background-color: var(--colorWhite);
+
+/* <1024 */ 
+
+@media (max-width: 1024px) {
+    .toggle-icon {
+        display: block;
+    }
 }
