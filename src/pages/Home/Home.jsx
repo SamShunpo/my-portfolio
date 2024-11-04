@@ -16,7 +16,7 @@ function Home() {
             <div className='contact'>
               <a href='#form' className='button'>
                 ME CONTACTER
-                <img src="../../src/assets/dot.svg" alt="Icon Linkedin" className='dot' />
+                <img src="../../public/images/dot.svg" alt="Icon Linkedin" className='dot' />
               </a>
               <a href="https://www.linkedin.com/in/samuel-gleize-bourras-a8458a100/" className='rs'><img src="../../src/assets/Frame 3.svg" alt="Icon Linkedin" /></a>
               <a href="https://github.com/SamShunpo" className='rs'><img src="../../src/assets/Frame 4.svg" alt="Icon Github" /></a>
