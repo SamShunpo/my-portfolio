@@ -7,9 +7,11 @@ import ErrorPage from './pages/ErrorPage/ErrorPage'
 import '../src/styles/index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+const basename = import.meta.env.MODE === 'production' ? "my-portfolio" : ""; 
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/my-portfolio">
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
