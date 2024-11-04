@@ -64,7 +64,7 @@ a {
 
 h1 {
     font-family: var(--titleFont);
-    font-size: 101px;
+    font-size: 6.5em;
     font-weight: 400;
     line-height: 90%;
     margin: 0;
@@ -73,20 +73,20 @@ h1 {
 
 h2 {
     font-family: var(--titleFont);
-    font-size: 76px;
+    font-size: 4.75em;
     font-weight: 400;
     margin: 0;
 }
 
 h3 {
     font-family: var(--textFont);
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 500;
 }
 
 p {
     font-family: var(--textFont);
-    font-size: 18px;
+    font-size: 1.125em;
     margin: 0;
     font-weight: 300;
     color: var(--colorGrey);
