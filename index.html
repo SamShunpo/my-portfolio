@@ -11,6 +11,19 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <form name="contact" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <p>
+      <label>Nom : <input type="text" name="name" /></label>
+    </p>
+    <p>
+      <label>Email : <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <label>Message : <textarea name="message"></textarea></label>
+    </p>
+  </form>
+  
 </body>
 
 </html>
