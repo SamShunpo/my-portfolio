@@ -23,7 +23,7 @@ function Home() {
             </div>
           </div>
           <div className='profile-pic'>
-            <img src="iamges/profile-pic.png" alt="" />
+            <img src="images/profile-pic.png" alt="photo de profil de Sam gleize avec des lunettes sur un fond gris/bleu" />
           </div>
         </section>
         <Project />
