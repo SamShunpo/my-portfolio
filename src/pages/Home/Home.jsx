@@ -16,14 +16,14 @@ function Home() {
             <div className='contact'>
               <a href='#form' className='button'>
                 ME CONTACTER
-                <img src="/my-portfolio/public/images/dot.svg" alt="Icon Linkedin" className='dot' />
+                <img src="images/dot.svg" alt="Icon Linkedin" className='dot' />
               </a>
-              <a href="https://www.linkedin.com/in/samuel-gleize-bourras-a8458a100/" className='rs'><img src="../../src/assets/Frame 3.svg" alt="Icon Linkedin" /></a>
-              <a href="https://github.com/SamShunpo" className='rs'><img src="../../src/assets/Frame 4.svg" alt="Icon Github" /></a>
+              <a href="https://www.linkedin.com/in/samuel-gleize-bourras-a8458a100/" className='rs'><img src="images/Frame 3.svg" alt="Icon Linkedin" /></a>
+              <a href="https://github.com/SamShunpo" className='rs'><img src="images/Frame 4.svg" alt="Icon Github" /></a>
             </div>
           </div>
           <div className='profile-pic'>
-            <img src="../../src/assets/profile-pic.png" alt="" />
+            <img src="iamges/profile-pic.png" alt="" />
           </div>
         </section>
         <Project />
