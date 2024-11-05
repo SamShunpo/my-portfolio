@@ -1,7 +1,95 @@
-.form {
+@import "../../styles/_variable.css";
+
+.form-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+}
+
+.form-left {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+}
+
+.span-form {
+    font-family: var(--textFont);
+    font-size: 1.125em;
+}
+
+.a-form {
+    color: var(--colorWhite);
+}
+
+form {
+    width: 50%;
+    max-width: 600px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 8px;
+}
+
+form label {
+    color: var(--colorGrey);
+    font-family: var(--textFont);
+}
+
+form input {
+    height: 51px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: white;
+    font-size: 1.125em;
+    border: none;
+}
+
+form textarea {
+    height: 156px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 12px 16px;
+    color: white;
+    font-size: 1.125em;
+    border: none;
+}
+
+.button-submit {
+    background-color: var(--actionColor);
+    border-radius: 100px;
+    padding: 20px 20px 20px 20px;
+    color: var(--colorBlack);
+    max-width: 140px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.button-submit:hover {
+
+}
+
+.rs-form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+
+/* <1024px */
+
+@media (max-width: 1024px ) {
+
+    form {
+        width: 100%;
+        max-width: 600px;
+    }
+    
 }
