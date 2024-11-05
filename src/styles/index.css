@@ -21,7 +21,9 @@ main {
 
 section {
     padding: 40px 0;
-    border-bottom: solid 1px var(--colorGrey);
+    border-bottom: solid 1px var(--colorBordure);
+    display: flex;
+    gap: 30px;
 }
 
 header {
@@ -60,6 +62,7 @@ a {
     color: var(--colorGrey);
     font-family: var(--textFont);
     text-decoration: none;
+    cursor: pointer;
 }
 
 h1 {
@@ -82,6 +85,12 @@ h3 {
     font-family: var(--textFont);
     font-size: 2em;
     font-weight: 500;
+}
+
+h4 {
+    font-family:var(--textFont) ;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 p {
