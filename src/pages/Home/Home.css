@@ -10,8 +10,6 @@
     flex-direction: column;
     justify-content: center;
     width: 45%;
-    max-height: 700px;
-    padding: 40px 0;
 }
 
 .profile-pic {
