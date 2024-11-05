@@ -2,7 +2,7 @@ import './Form.css'
 
 function Form() {
     return (
-        <section id="form" className='form-container'>
+        <section id="form">
             <div className="form-left">
                 <h2>Contact</h2>
                 <span className="span-form">Un petit bonjour : <a href="mailto:gleizebourrassamuel@gmail.com" className="a-form">gleizebourrassamuel@gmail.com</a></span>

@@ -23,7 +23,10 @@ section {
     padding: 40px 0;
     border-bottom: solid 1px var(--colorBordure);
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 header {
@@ -42,6 +45,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    width: 100%;
 }
 
 span {
@@ -105,7 +109,38 @@ p {
 /* < 1024px */
 
 @media (max-width: 1024px) {
+
     nav {
         display: none;
+    }
+}
+
+/* < 768px */
+
+@media (max-width: 768px) {
+
+    main {
+padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    img {
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    header {
+        padding: 10px 20px;
     }
 }

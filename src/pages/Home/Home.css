@@ -1,20 +1,15 @@
 @import "../../styles/_variable.css";
 
-.hero {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.link-article {
     width: 100%;
-    padding: 0;
-    
 }
+
 
 .hero-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 45%;
+    width: 45%;
     max-height: 700px;
     padding: 40px 0;
 }
@@ -29,15 +24,14 @@
 }
 
 img {
-    max-width: 400px;
     max-height: 400px;
     align-self: center;
 }
 
 .rs {
- display: flex;
- flex-direction: column;
- justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact {
@@ -66,26 +60,11 @@ img {
     height: 8px;
 }
 
-.project-title {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    gap: 0;
-    width: 100%;
-}
-
-.about-me {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .about {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 60%;
+    width: 50%;
     max-width: 700px;
 }
 
@@ -103,13 +82,38 @@ img {
 
 /* <1024px */
 
-@media (max-width: 1024px ) {
+@media (max-width: 1024px) {
 
     .hero {
         justify-content: center;
     }
 
     .hero-left {
-        max-width: 100%;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    img {
+        max-width: 600px;
+        max-height: 600px;
+    }
+
+    .about {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .about-link-container {
+        margin-bottom: 100px;
+    }
+}
+
+/* <768px */
+
+@media (max-width: 768px) {
+
+    .profile-pic {
+        height: 400px;
     }
 }

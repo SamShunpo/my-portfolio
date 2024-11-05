@@ -4,6 +4,7 @@ article {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 48px;
     margin: 80px 0;
 }
@@ -12,7 +13,7 @@ article {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 50%;
+    width: 45%;
     max-width: 600px;
     background-color: #1a1a1a;
     padding: 20px;
@@ -31,10 +32,41 @@ article {
 }
 
 .article-image {
+    width: 100%;
 }
 
 .article-right {
     display: flex;
     flex-direction: column;
+    width: 45%;
     max-width: 576px;
+}
+
+/* <1024 px */
+
+@media (max-width: 1024px ) {
+
+    article {
+        justify-content: center;
+    }
+
+    .article-left {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .article-right {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* <768 px */
+
+@media (max-width: 768px ) {
+
+    .article-image {
+        max-width: 500px;
+        max-height: 500px;
+    }
 }

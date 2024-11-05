@@ -49,18 +49,18 @@ function Home() {
               <img src="images/profile-pic.png" alt="photo de profil de Sam gleize avec des lunettes sur un fond gris/bleu" />
             </div>
           </section>
-          <section className="project-title">
+          <section>
             <div>
               <h2>MES REALISATIONS</h2>
               <p>Voici quelques-uns des projets sélectionnés qui témoignent de ma passion pour le développement web.</p>
             </div>
             {projects.map(({ cover, title, description, tag, id }) =>
-              <Link key={id} to={`/project/${id}`}>
+              <Link key={id} to={`/project/${id}`} className='link-article'>
                 <Project cover={cover.url} title={title} description={description} tag={tag} />
               </Link>
             )}
           </section>
-          <section className='about-me'>
+          <section>
             <h2>A PROPOS DE MOI</h2>
             <div className='about'>
               <h3>De Gérant de Bar à Développeur Lowcode</h3>
