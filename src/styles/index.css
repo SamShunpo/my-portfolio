@@ -8,6 +8,7 @@ html,
     background-color: var(--colorBlack);
     color: var(--colorWhite);
     scroll-behavior: smooth;
+    margin: auto;
 }
 
 main {
