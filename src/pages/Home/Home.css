@@ -2,8 +2,16 @@
 
 .link-article {
     width: 100%;
+    border-radius: 12px;
+    margin: 40px 0 0 0;
+    transition:
+        background-color 1s;
+
 }
 
+.link-article:hover {
+    background-color: #6969696b;
+}
 
 .hero-left {
     display: flex;
