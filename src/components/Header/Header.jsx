@@ -1,21 +1,28 @@
 import './Header.css'
-import { Link, useLocation } from 'react-router-dom'
+import Nav from '../../components/Nav/Nav'
+import { useState } from 'react'
 
 function Header() {
-    const { pathname } = useLocation()
+    const [isToggled, setIsToggled] = useState(false)
+
+    const handleClick = () => {
+        setIsToggled(!isToggled)
+    }
 
     return (
         <header>
-            <span>Sam GLEIZE</span>
-            <nav>
-                <Link to={pathname === "/" ? "#work" : "/#work"}>Work</Link>
-                <Link to="/about">About</Link>
-                <a href="#form">Contact</a>
-            </nav>
-            <span className='toggle-icon'></span>
+            <div className='descktop-nav'>
+                <span>Sam GLEIZE</span>
+                <Nav isToggled={isToggled} action={handleClick}/>
+                <div className="toggle-icon" onClick={handleClick}>
+                        <div className="hamburger hamburger1">
+                            <span className={`bar bar1 ${isToggled ? 'rotate' : 'fix'}`}></span>
+                            <span className={`bar bar4 ${isToggled ? 'rotate' : 'fix'}`}></span>
+                        </div>
+                </div>
+            </div>
         </header>
     )
-
 }
 
 export default Header

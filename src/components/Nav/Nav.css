@@ -1,0 +1,26 @@
+.menu.hidden {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+
+    .menu.hidden {
+        display: none;
+    }
+
+    .menu.visible {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--colorBlack);
+        gap: 20px;
+        position: absolute;
+        margin-top: 50px;
+        width: 100%;
+        align-items: flex-start;
+        height: 100vh;
+        padding-top: 30px;
+    }
+}
