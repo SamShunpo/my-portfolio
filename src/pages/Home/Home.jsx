@@ -56,7 +56,7 @@ function Home() {
             </div>
             {projects.map(({ cover, title, description, tag, id }) =>
               <Link key={id} to={`/project/${id}`} className='link-article'>
-                <Project cover={cover.url} title={title} description={description} tag={tag} />
+                <Project cover={cover} title={title} description={description} tag={tag} />
               </Link>
             )}
           </section>
