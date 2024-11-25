@@ -79,9 +79,9 @@ function Home() {
             <h2>MES REALISATIONS</h2>
             <p>Voici quelques-uns des projets sélectionnés qui témoignent de ma passion pour le développement web.</p>
           </div>
-          {projects.map(({ cover, title, description, tag, id, demoLink, githubLink }) =>
+          {projects.map(({ cover, title, description, tag, id, live_demo_link, github_link }) =>
             <Link key={id} to={`/project/${id}`} className='link-article'>
-              <Project cover={cover} title={title} description={description} tag={tag} demoLink={demoLink} githubLink={githubLink} />
+              <Project cover={cover} title={title} description={description} tag={tag} demoLink={live_demo_link} githubLink={github_link} />
             </Link>
           )}
         </section>
