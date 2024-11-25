@@ -10,17 +10,28 @@ article {
 }
 
 .article-left {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 45%;
+    width: 40%;
     max-width: 600px;
     background-color: #1a1a1a;
-    padding: 20px;
+    padding: 90px 50px;
     border-radius: 12px;
+    transition:
+        background-color 0.2s;
+}
+
+
+.article-left:hover {
+    background-color: #393939;
 }
 
 .tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     background-color: #0a0a0a;
     padding: 8px 16px;
     border-radius: 100px;
@@ -32,22 +43,55 @@ article {
 }
 
 .article-image {
+    object-fit: cover;
+    border-radius: 12px;
+    height: 300px;
     width: 100%;
 }
 
 .article-right {
     display: flex;
     flex-direction: column;
-    width: 45%;
-    max-width: 576px;
+    width: 40%;
+}
+
+.project-link-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.project-link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-bottom: solid 1px var(--actionColor);
+    height: 23px;
+    transition:
+        height 0.1s;
+
+}
+
+.project-link>a {
+    color: var(--actionColor);
+    cursor: pointer;
+}
+
+.project-link:hover {
+    height: 25px;
+}
+
+.link-image {
+    height: 23px;
 }
 
 /* <1024 px */
 
-@media (max-width: 1024px ) {
+@media (max-width: 1024px) {
 
     article {
         justify-content: center;
+        padding: 40px 0;
     }
 
     .article-left {
@@ -63,10 +107,16 @@ article {
 
 /* <768 px */
 
-@media (max-width: 768px ) {
+@media (max-width: 768px) {
+
+    .article-left {
+        padding: 70px 20px;
+    }
 
     .article-image {
-        max-width: 500px;
-        max-height: 500px;
+        object-fit: cover;
+        border-radius: 12px;
+        height: 250px;
+        width: 100%;
     }
 }

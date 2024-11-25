@@ -1,3 +1,10 @@
+.home {
+    font-family: var(--titleFont);
+    color: var(--colorGrey);
+    height: fit-content;
+    font-size: 32px;
+}
+
 .descktop-nav {
     display: flex;
     flex-direction: row;
