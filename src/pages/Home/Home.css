@@ -9,19 +9,6 @@
     align-items: center;
 }
 
-.link-article {
-    width: 100%;
-    border-radius: 12px;
-    margin: 40px 0 0 0;
-    transition:
-        background-color 0.2s;
-
-}
-
-.link-article:hover {
-    background-color: #6969696b;
-}
-
 .hero-left {
     display: flex;
     flex-direction: column;
@@ -49,6 +36,19 @@ img {
     justify-content: center;
 }
 
+.svg-rs rect,
+.svg-rs path {
+    transition: fill 0.3s ease;
+}
+
+.rs:hover rect{
+    fill: var(--actionColor);
+}
+
+.rs:hover path{
+    fill: #222222;
+}
+
 .contact {
     display: flex;
     flex-direction: row;
@@ -58,21 +58,33 @@ img {
 }
 
 .button {
+    position: relative;
     background-color: var(--actionColor);
     border-radius: 100px;
-    padding: 15px 24px 15px 15px;
+    padding: 15px 50px 15px 15px;
     color: var(--colorBlack);
     max-width: 190px;
     font-weight: 600;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+}
+
+.button:hover .dot {
+    content: url("images/circle.svg");
+    transform: translateY(-50%) scale(5);
+    transform-origin: center;
+
 }
 
 .dot {
+    position: absolute;
     width: 8px;
     height: 8px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
 }
 
 .about {
@@ -85,7 +97,6 @@ img {
 
 .about-link {
     color: var(--actionColor);
-
 }
 
 .about-link-container {
@@ -93,6 +104,11 @@ img {
     width: fit-content;
     height: 23px;
     margin-bottom: 200px;
+    transition: height 0.1s ease;
+}
+
+.about-link-container:hover {
+    height: 25px;
 }
 
 /* <1024px */
