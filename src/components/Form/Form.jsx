@@ -52,7 +52,7 @@ function Form() {
         e.preventDefault();
 
         if (validate()) {
-            console.log('Formulaire soumis avec succès :', formData);
+            e.target.submit();
         } else {
             console.log('Formulaire invalide.');
         }
