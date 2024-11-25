@@ -13,6 +13,11 @@
 
 .a-form {
     color: var(--colorWhite);
+    transition: color 0.2s ease;
+}
+
+.a-form:hover {
+    color: var(--actionColor);
 }
 
 form {
@@ -63,10 +68,11 @@ form textarea {
     font-weight: 600;
     cursor: pointer;
     border: none;
+    transition: all 0.2s ease;
 }
 
 .button-submit:hover {
-
+   box-shadow: 0px 7px 30px #D3E97A60;
 }
 
 .rs-form-container {
@@ -76,15 +82,21 @@ form textarea {
     margin-top: 30px;
 }
 
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+    display: block;
+  }
 
 /* <1024px */
 
-@media (max-width: 1024px ) {
+@media (max-width: 1024px) {
 
     form {
         width: 100%;
         margin: auto;
         margin-top: 50px;
     }
-    
+
 }
