@@ -95,21 +95,28 @@ img {
     max-width: 700px;
 }
 
-.about-link {
-    color: var(--actionColor);
+.about-link-container{
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: 25px;
+    z-index: 0;
+    margin-bottom: 200px;
 }
 
-.about-link-container {
+.about-link {
+    position: relative;
+    z-index: 10;
+    color: var(--actionColor);
     border-bottom: 1px solid var(--actionColor);
-    width: fit-content;
     height: 23px;
-    margin-bottom: 200px;
     transition: height 0.1s ease;
 }
 
-.about-link-container:hover {
+.about-link:hover {
     height: 25px;
 }
+
 
 /* <1024px */
 
