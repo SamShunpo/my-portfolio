@@ -3,8 +3,9 @@ import './Skill.css'
 function Skill({ cover, name, id }) {
 
     return (
-        <div key={id} className='article-right'>
-          <img src={cover} alt=""/>
+        <div key={id} className='skill'>
+            <span>{name}</span>
+          <img src={cover} alt="" />
         </div>
 
     )

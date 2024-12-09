@@ -53,9 +53,11 @@ function About() {
             </div>
             <div className='about-right'>
               <p>Maecenas bibendum consequat purus, id ornare diam aliquet pretium. Mauris tincidunt augue purus, a semper elit finibus ac. Nam eu iaculis magna, ut euismod sapien. Nam dictum gravida nisl vel finibus. Maecenas ullamcorper velit non commodo venenatis. Vestibulum elementum urna at diam suscipit, ac facilisis arcu consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc nunc erat, imperdiet ac justo at, molestie congue metus. Proin commodo eleifend libero, a posuere purus fermentum non. Aliquam erat volutpat</p>
-              {skills.map(({ cover, name, id }) =>
-                <Skill key={id} cover={cover} name={name} />
-              )}
+              <div className='skill-container'>
+                {skills.map(({ cover, name, id }) =>
+                  <Skill key={id} cover={cover} name={name} />
+                )}
+              </div>
             </div>
           </section>
           <section>

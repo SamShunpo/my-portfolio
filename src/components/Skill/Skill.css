@@ -1,0 +1,23 @@
+@import "../../styles/_variable.css";
+
+.skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px var(--colorGrey);
+    border-radius: 300px;
+    padding: 4px 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill>img {
+    width: 40px;
+    height: 40px;
+}
+
+.skill>span {
+    color: var(--colorWhite);
+    font-size: 16px;
+    text-transform: uppercase;
+}

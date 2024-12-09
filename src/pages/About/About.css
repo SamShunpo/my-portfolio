@@ -25,3 +25,11 @@
     transform: translateY(-50%) scale(5);
     transform-origin: center;
 }
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 20px;
+    column-gap: 30px;
+}
