@@ -4,7 +4,7 @@ import { fetchSkills } from '../../redux/slices/skillSlice';
 import './About.css'
 import Layout from '../../components/Layout/Layout'
 import Form from '../../components/Form/Form'
-import Skill from '../../components/Skill/skill';
+import Skill from '../../components/Skill/Skill';
 
 function About() {
   const { items: skills, isLoading: isLoadingSkills } = useSelector((state) => state.skills);
