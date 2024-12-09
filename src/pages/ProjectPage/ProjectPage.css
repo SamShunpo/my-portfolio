@@ -1,2 +1,15 @@
+@import "../../styles/_variable.css";
 
+.project-page-main{
+    height: calc(100vh - 205px);
+    padding-top: 50px;
+    gap: 20px;
+}
+
+.project-page-main>a {
+    transition: all 0.3s ease;
+}
   
+.project-page-main>a:hover{
+    color: var(--actionColor);
+}

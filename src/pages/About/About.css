@@ -1,2 +1,27 @@
+.image-about {
+    width: 100%;
+    max-height: none;
+    margin-top: 30px;
+}
 
-  
+.about-left {
+    width: 45%;
+}
+
+.about-right {
+    width: 45%;
+}
+
+.about-left>h1 {
+    text-align: start;
+}
+
+.about-right>h3 {
+    margin-block-start: auto;
+}
+
+.cv:hover .dot {
+    content: url("images/circle-download.svg");
+    transform: translateY(-50%) scale(5);
+    transform-origin: center;
+}

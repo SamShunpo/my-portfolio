@@ -16,6 +16,10 @@
     width: 45%;
 }
 
+.hero-left>h1 {
+    text-align: start;
+}
+
 .profile-pic {
     height: 700px;
     width: 45%;
@@ -28,12 +32,14 @@
 img {
     max-height: 400px;
     align-self: center;
+    border-radius: 12px;
 }
 
 .rs {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 0;
 }
 
 .svg-rs rect,
@@ -63,6 +69,7 @@ img {
     border-radius: 100px;
     padding: 15px 50px 15px 15px;
     color: var(--colorBlack);
+    min-width: 100px;
     max-width: 190px;
     font-weight: 600;
     display: flex;
@@ -71,7 +78,7 @@ img {
 }
 
 .button:hover .dot {
-    content: url("images/circle.svg");
+    content: url("images/circle-contact.svg");
     transform: translateY(-50%) scale(5);
     transform-origin: center;
 
@@ -132,7 +139,7 @@ img {
     }
 
     img {
-        max-width: 600px;
+        max-width: 500px;
         max-height: 600px;
     }
 
@@ -152,6 +159,11 @@ img {
 @media (max-width: 768px) {
 
     .profile-pic {
-        height: 400px;
+        height: 450px;
+    }
+
+    .contact {
+        width: 100%;
+        max-width: 320px;
     }
 }

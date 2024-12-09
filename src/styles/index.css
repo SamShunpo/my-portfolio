@@ -83,6 +83,7 @@ h1 {
     line-height: 90%;
     margin: 0;
     max-width: 550px;
+    text-align: center;
 }
 
 h2 {
@@ -141,7 +142,8 @@ padding: 0 20px;
     }
 
     img {
-        max-height: 280px;
+        max-height: 350px;
+        object-fit: contain;
     }
 
     header {
