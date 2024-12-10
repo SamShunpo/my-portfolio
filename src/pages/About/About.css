@@ -20,6 +20,10 @@
     margin-block-start: auto;
 }
 
+.about-right>p {
+    margin-bottom: 40px;
+}
+
 .cv:hover .dot {
     content: url("images/circle-download.svg");
     transform: translateY(-50%) scale(5);
@@ -32,4 +36,19 @@
     flex-direction: row;
     row-gap: 20px;
     column-gap: 30px;
+}
+
+/* < 1024px */
+
+@media (max-width: 1024px) {
+
+    .image-about {
+        width: 100%;
+        max-height: none;
+        margin-top: 30px;
+    }
+
+    .about-right, .about-left{
+        width: 100%;
+    }
 }

@@ -80,24 +80,28 @@ h1 {
     font-family: var(--titleFont);
     font-size: 6.5em;
     font-weight: 400;
-    line-height: 90%;
+    line-height: 0.9;
     margin: 0;
-    max-width: 550px;
-    text-align: center;
+    text-align: start;
 }
+
 
 h2 {
     font-family: var(--titleFont);
     font-size: 4.75em;
     font-weight: 400;
     margin: 0;
+    text-align: start;
+    line-height: 0.9;
 }
+
 
 h3 {
     font-family: var(--textFont);
     font-size: 2em;
     font-weight: 500;
-}
+    margin-block-start: auto;
+} 
 
 h4 {
     font-family:var(--textFont) ;
