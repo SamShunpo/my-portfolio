@@ -78,7 +78,7 @@ img {
 }
 
 .button:hover .dot {
-    content: url("images/circle-contact.svg");
+    content: url("/images/circle-contact.svg");
     transform: translateY(-50%) scale(5);
     transform-origin: center;
 
