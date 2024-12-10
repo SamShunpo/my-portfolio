@@ -73,7 +73,7 @@ function Home() {
               Après 15 ans à tirer des pintes et à gérer un bar à bière, j'ai décidé de changer de fût et de me lancer dans le code. Séduit dans un premier temps par le "no-code", j'ai vite réalisé que j'avais soif de plus. Maintenant formé en HTML, CSS et JavaScript, je mélange astucieusement no-code et code pour livrer des projets sur-mesure, avec la rapidité d'un service en happy hour. Envie d'en savoir plus ?
             </p>
             <div className='about-link-container'>
-            <Link to="/about" className='about-link'>Cliquez ici !</Link>
+            <Link to="/about#top" className='about-link'>Cliquez ici !</Link>
             </div>
           </div>
         </section>
