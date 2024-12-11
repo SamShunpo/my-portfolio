@@ -53,12 +53,14 @@ article {
     display: flex;
     flex-direction: column;
     width: 40%;
+    gap: 20px;
 }
 
 .project-link-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    height: 25px;
 }
 
 .project-link {
@@ -83,6 +85,12 @@ article {
 
 .link-image {
     height: 23px;
+}
+
+.project-skills{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 /* <1024 px */

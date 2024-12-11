@@ -4,11 +4,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border: solid 1px var(--colorGrey);
-    border-radius: 300px;
-    padding: 4px 20px;
+    border-bottom: solid 1px var(--colorGrey);
     align-items: center;
     gap: 20px;
+    min-width: 80px;
 }
 
 .skill>img {
