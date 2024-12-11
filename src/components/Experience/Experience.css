@@ -1,0 +1,31 @@
+@import "../../styles/_variable.css";
+
+.article-exp {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+    gap: 10px;
+}
+
+.header-exp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.article-exp>p {
+    margin: 0;
+}
+
+.article-exp>a {
+    color: var(--actionColor);
+    width: fit-content;
+    border-bottom: solid 1px var(--colorBlack);
+    transition: all 0.3s ease;
+}
+
+.article-exp>a:hover {
+    border-bottom: solid 1px var(--actionColor);
+}
