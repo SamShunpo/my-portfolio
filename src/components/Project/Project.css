@@ -93,6 +93,44 @@ article {
     gap: 20px;
 }
 
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .article-left, .article-right {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+ 
+  .article-left.visible {
+    animation: slideInLeft 1s ease-out forwards; 
+  }
+  
+  .article-right.visible {
+    animation: scaleUp 1s ease-out forwards; 
+  }
+  
+
 /* <1024 px */
 
 @media (max-width: 1024px) {
