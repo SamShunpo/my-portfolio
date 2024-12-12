@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.hero {
+    padding: 0 0 40px 0;
+}
+
 .hero-left {
     display: flex;
     flex-direction: column;
