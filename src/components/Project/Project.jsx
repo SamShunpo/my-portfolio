@@ -17,8 +17,6 @@ function Project({ cover, title, description, tag, demoLink, githubLink, id, por
 
     const projectSkills = skills.filter(skill => 
         portfolio_skills.some(skillObj => skillObj.id === skill.id));
-    console.log(portfolio_skills)
-    console.log(skills)
 
     if (isLoadingSkills) {
         return (
