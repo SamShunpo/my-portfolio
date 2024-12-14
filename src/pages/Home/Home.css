@@ -87,6 +87,12 @@ img {
     font-family: var(--textFont);
     font-size: 1.125em;
     border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.pagination-button:hover {
+    color: var(--actionColor);
 }
 
 /* <1024px */
