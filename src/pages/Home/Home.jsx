@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProjects } from '../../redux/slices/projectSlice';
 import './Home.css';
@@ -9,14 +9,25 @@ import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
 function Home() {
-  const { items: projects, isLoading : isLoadingProjects, error } = useSelector((state) => state.projects);
+  const { items: projects, isLoading: isLoadingProjects, error } = useSelector((state) => state.projects);
   const dispatch = useDispatch();
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
 
   useEffect(() => {
-    if (projects.length === 0){
-    dispatch(fetchProjects());
+    if (projects.length === 0) {
+      dispatch(fetchProjects());
     }
   }, [dispatch, projects]);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+    const workSection = document.getElementById('work');
+    if (workSection) {
+      workSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
 
   if (isLoadingProjects) {
     return (
@@ -30,6 +41,9 @@ function Home() {
     return <p>Erreur : {error}</p>;
   }
 
+  const startIndex = currentPage * itemsPerPage;
+  const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
+
   return (
     <Layout>
       <main>
@@ -37,20 +51,42 @@ function Home() {
           <div className='hero-left'>
             <h1>SALUT, JE SUIS SAM GLEIZE.</h1>
             <p>Développeur Lowcode sur Lyon, toujours à l'affût des dernières nouveautés</p>
-            <Button image="images/dot.svg" hoverImage="/images/circle-contact.svg" title="ME CONTACTER" href='#form'/>
+            <Button image="images/dot.svg" hoverImage="/images/circle-contact.svg" title="ME CONTACTER" href='#form' />
           </div>
           <div className='profile-pic'>
             <img src="images/sam-home.webp" alt="photo de profil de Sam gleize avec des lunettes sur un fond gris/bleu" />
           </div>
         </section>
         <section id='work'>
-          <div>
+          <div className='project-title'>
             <h2>MES REALISATIONS</h2>
             <p>Voici quelques-uns des projets sélectionnés qui témoignent de ma passion pour le développement web.</p>
           </div>
-          {projects.map(({ cover, title, description, tag, id, live_demo_link, github_link, skills}) =>
-            <Project key={id} id={id} cover={cover} title={title} description={description} tag={tag} demoLink={live_demo_link} githubLink={github_link} portfolio_skills={skills}/>
-          )}
+          {currentProjects.map(({ cover, title, description, tag, id, live_demo_link, github_link, skills }) => (
+            <Project
+              key={id}
+              id={id}
+              cover={cover}
+              title={title}
+              description={description}
+              tag={tag}
+              demoLink={live_demo_link}
+              githubLink={github_link}
+              portfolio_skills={skills}
+            />
+          ))}
+          <div className="pagination">
+            {currentPage > 0 && (
+              <button className="pagination-button" onClick={() => handlePageChange(currentPage - 1)}>
+                ← Précédent
+              </button>
+            )}
+            {startIndex + itemsPerPage < projects.length && (
+              <button className="pagination-button" onClick={() => handlePageChange(currentPage + 1)}>
+                Suivant →
+              </button>
+            )}
+          </div>
         </section>
         <section>
           <h2>A PROPOS DE MOI</h2>
@@ -60,7 +96,7 @@ function Home() {
               Après 15 ans à tirer des pintes et à gérer un bar à bière, j'ai décidé de changer de fût et de me lancer dans le code. Séduit dans un premier temps par le "no-code", j'ai vite réalisé que j'avais soif de plus. Maintenant formé en HTML, CSS et JavaScript, je mélange astucieusement no-code et code pour livrer des projets sur-mesure, avec la rapidité d'un service en happy hour. Envie d'en savoir plus ?
             </p>
             <div className='about-link-container'>
-            <Link to="/about#top" className='about-link'>Cliquez ici !</Link>
+              <Link to="/about#top" className='about-link'>Cliquez ici !</Link>
             </div>
           </div>
         </section>

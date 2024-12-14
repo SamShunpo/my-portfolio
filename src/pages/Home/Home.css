@@ -1,5 +1,10 @@
 @import "../../styles/_variable.css";
 
+
+.project-title {
+    margin-bottom: 50px;
+}
+
 .loader {
     display: flex;
     flex-direction: column;
@@ -47,7 +52,7 @@ img {
     max-width: 700px;
 }
 
-.about-link-container{
+.about-link-container {
     display: flex;
     position: relative;
     width: fit-content;
@@ -60,15 +65,29 @@ img {
     position: relative;
     z-index: 10;
     color: var(--actionColor);
-    border-bottom: 1px solid var(--actionColor);
+    border-bottom: 1px solid var(--colorBlack);
     height: 23px;
-    transition: height 0.1s ease;
+    transition: all 0.3s ease;
 }
 
 .about-link:hover {
-    height: 25px;
+    border-bottom: 1px solid var(--actionColor);
 }
 
+.pagination {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.pagination-button {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    font-family: var(--textFont);
+    font-size: 1.125em;
+    border: none;
+}
 
 /* <1024px */
 
