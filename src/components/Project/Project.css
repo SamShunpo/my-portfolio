@@ -53,7 +53,7 @@ article {
     display: flex;
     flex-direction: column;
     width: 40%;
-    gap: 20px;
+    gap: 30px;
 }
 
 .project-link-container {
@@ -67,10 +67,10 @@ article {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border-bottom: solid 1px var(--actionColor);
     height: 23px;
+    border-bottom: solid 1px var(--colorBlack);
     transition:
-        height 0.1s;
+        all 0.3s ease;
 
 }
 
@@ -80,7 +80,7 @@ article {
 }
 
 .project-link:hover {
-    height: 25px;
+    border-bottom: solid 1px var(--actionColor);
 }
 
 .link-image {
@@ -123,11 +123,11 @@ article {
   
  
   .article-left.visible {
-    animation: slideInLeft 1s ease-out forwards; 
+    animation: slideInLeft 0.8s ease-out forwards; 
   }
   
   .article-right.visible {
-    animation: scaleUp 1s ease-out forwards; 
+    animation: scaleUp 0.8s ease-out forwards; 
   }
   
 

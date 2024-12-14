@@ -13,13 +13,13 @@ function Project({ cover, title, description, tag, demoLink, githubLink, id, por
     const checkVisibility = () => {
         if (articleLeftRef.current) {
             const rect = articleLeftRef.current.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            if (rect.top >= 0 && rect.bottom -300 <= window.innerHeight) {
                 setIsVisibleLeft(true);
             }
         }
         if (articleRightRef.current) {
             const rect = articleRightRef.current.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            if (rect.top >= 0 && rect.bottom -300 <= window.innerHeight) {
                 setIsVisibleRight(true);
             }
         }
