@@ -62,7 +62,8 @@ function About() {
             <h2>Hard Skills</h2>
           </div>
           <div className='about-right'>
-            <p>Maecenas bibendum consequat purus, id ornare diam aliquet pretium. Mauris tincidunt augue purus, a semper elit finibus ac. Nam eu iaculis magna, ut euismod sapien.</p>
+            <p><span>"Un mix parfait entre tradition et innovation"</span><br />
+            De la maîtrise des outils no-code comme Bubble ou Make, à la rigueur des langages classiques comme HTML, CSS et JavaScript, mes compétences s'étendent sur un large éventail technologique. Mon approche ? Trouver l'équilibre parfait entre rapidité d'exécution et personnalisation sur-mesure. Un peu comme une recette de cocktail bien dosée, mais avec du code. 😉 Vous avez un projet en tête ? Je suis prêt à le shaker</p>
             <div className='skill-container'>
               {skills.map(({ cover, name, id }) =>
                 <Skill key={id} cover={cover} name={name} />
