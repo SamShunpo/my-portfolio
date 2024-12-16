@@ -58,7 +58,7 @@ img {
     width: fit-content;
     height: 25px;
     z-index: 0;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .about-link {
@@ -117,10 +117,6 @@ img {
         width: 100%;
         max-width: 600px;
         margin: auto;
-    }
-
-    .about-link-container {
-        margin-bottom: 100px;
     }
 
     .project-title>h2 {

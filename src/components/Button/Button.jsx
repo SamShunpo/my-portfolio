@@ -1,32 +1,34 @@
 import './Button.css'
-import React, { useState } from 'react';
-import MediaQuery from 'react-responsive';
+import React, { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 function Button({ image, hoverImage, title, href, isDownload = false, mobileImage }) {
-  const [currentImage, setCurrentImage] = useState(image);
+
+  const isMobile = useMediaQuery({ query: '(max-width: 1024px)' })
+  const [currentImage, setCurrentImage] = useState(isMobile ? mobileImage : image);
+
+  useEffect(() => {
+    setCurrentImage(isMobile ? mobileImage : image);
+  }, [isMobile, image, mobileImage]);
 
   const handleMouseEnter = () => {
-    setCurrentImage(hoverImage);
+    if (!isMobile) {
+      setCurrentImage(hoverImage);
+    }
   }
 
   const handleMouseLeave = () => {
-    setCurrentImage(image);
+    if (!isMobile) {
+      setCurrentImage(image);
+    }
   }
 
   return (
     <div className='contact'>
-      <MediaQuery maxWidth={1024}>
-        <a href={href} className='button'>
-          {title}
-          <img src={mobileImage} alt="" className='dot' />
-        </a>
-      </MediaQuery>
-      <MediaQuery minWidth={1024}>
-        <a href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='button' download={isDownload ? true : undefined}>
-          {title}
-          <img src={currentImage} style={{ transition: '0.3s ease-in-out' }} alt="icon d'un rond avec une flêche" className='dot' />
-        </a>
-      </MediaQuery>
+      <a href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='button' download={isDownload ? true : undefined}>
+        {title}
+        <img src={currentImage} style={{ transition: '0.3s ease-in-out' }} alt="icon d'un rond avec une flêche" className='dot' />
+      </a>
       <a href="https://www.linkedin.com/in/samuel-gleize-bourras-a8458a100/" className='rs' target="_blank" rel="noopener noreferrer"><svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" className='svg-rs'>
         <rect width="54" height="54" rx="27" fill="#222222" />
         <path d="M19.3983 21.7968C20.7073 21.7968 21.7686 20.7356 21.7686 19.4265C21.7686 18.1174 20.7073 17.0562 19.3983 17.0562C18.0892 17.0562 17.0279 18.1174 17.0279 19.4265C17.0279 20.7356 18.0892 21.7968 19.3983 21.7968Z" fill="#D3E97A" />

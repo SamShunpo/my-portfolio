@@ -51,7 +51,7 @@ function Home() {
           <div className='hero-left'>
             <h1>SALUT, JE SUIS SAM GLEIZE.</h1>
             <p>Développeur Lowcode sur Lyon, toujours à l'affût des dernières nouveautés</p>
-            <Button image="images/dot.svg" hoverImage="/images/circle-contact.svg" title="ME CONTACTER" href='#form' />
+            <Button image="images/dot.svg" hoverImage="/images/circle-contact.svg" title="ME CONTACTER" href='#form' mobileImage="/images/circle-contact.svg" />
           </div>
           <div className='profile-pic'>
             <img src="images/sam-home.webp" alt="photo de profil de Sam gleize avec des lunettes sur un fond gris/bleu" />
