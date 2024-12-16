@@ -1,5 +1,6 @@
 @import "../../styles/_variable.css";
 
+
 .project-page-main{
     height: calc(100vh - 205px);
     padding-top: 50px;
@@ -12,4 +13,16 @@
   
 .project-page-main>a:hover{
     color: var(--actionColor);
+}
+
+.project-details {
+    height: calc(100vh - 210px);
+    flex-direction: column;
+}
+
+.project-page-title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }

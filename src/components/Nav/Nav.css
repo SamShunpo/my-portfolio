@@ -6,10 +6,6 @@
     align-items: center;
 }
 
-.nav-link {
-    transition: all 0.3s ease;
-}
-
 .nav-link.select {
     color: var(--actionColor);
 }
@@ -47,4 +43,9 @@
         z-index: 1000;
     }
 
+    .nav-link {
+        font-size: 2em;
+    }
+
 }
+

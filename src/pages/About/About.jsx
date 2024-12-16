@@ -53,7 +53,7 @@ function About() {
             <p>
               Après 15 ans à tirer des pintes et à gérer un bar à bière, j'ai décidé de changer de fût et de me lancer dans le code. Séduit dans un premier temps par le "no-code", j'ai vite réalisé que j'avais soif de plus. Maintenant formé en HTML, CSS et JavaScript, je mélange astucieusement no-code et code pour livrer des projets sur-mesure, avec la rapidité d'un service en happy hour. Envie d'en savoir plus ?
             </p>
-            <Button image="/images/dot.svg" hoverImage="/images/circle-download.svg" title="MON CV" href="/images/cv_sam.pdf" isDownload={true}/>
+            <Button image="/images/dot.svg" hoverImage="/images/circle-download.svg" title="MON CV" href="/images/cv_sam.pdf" isDownload={true} mobileImage="/images/circle-download.svg"/>
           </div>
           <img src="/images/sam-about.webp" alt="image" className='image-about' />
         </section>
@@ -62,7 +62,7 @@ function About() {
             <h2>Hard Skills</h2>
           </div>
           <div className='about-right'>
-            <p><span>"Un mix parfait entre tradition et innovation"</span><br />
+            <p><span className='skills-title'>"Un mix parfait entre tradition et innovation"</span><br />
             De la maîtrise des outils no-code comme Bubble ou Make, à la rigueur des langages classiques comme HTML, CSS et JavaScript, mes compétences s'étendent sur un large éventail technologique. Mon approche ? Trouver l'équilibre parfait entre rapidité d'exécution et personnalisation sur-mesure. Un peu comme une recette de cocktail bien dosée, mais avec du code. 😉 Vous avez un projet en tête ? Je suis prêt à le shaker</p>
             <div className='skill-container'>
               {skills.map(({ cover, name, id }) =>

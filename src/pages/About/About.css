@@ -46,4 +46,12 @@
     .about-right, .about-left{
         width: 100%;
     }
+
+    .about-right {
+        margin-bottom: 60px;
+    }
+
+    .skills-title {
+        font-size: 1.5em;
+    }
 }

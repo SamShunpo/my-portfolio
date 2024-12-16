@@ -105,6 +105,7 @@ img {
 
     .hero-left {
         width: 100%;
+        margin-top: 60px;
     }
 
     img {
@@ -116,11 +117,14 @@ img {
         width: 100%;
         max-width: 600px;
         margin: auto;
-        margin-top: 40px;
     }
 
     .about-link-container {
         margin-bottom: 100px;
+    }
+
+    .project-title>h2 {
+        margin-bottom: 10px;
     }
 }
 

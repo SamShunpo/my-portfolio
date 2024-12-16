@@ -12,12 +12,12 @@ article {
 .article-left {
     position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 30px;
     width: 40%;
     max-width: 600px;
     background-color: #1a1a1a;
-    padding: 90px 50px;
+    padding: 60px 50px;
     border-radius: 12px;
     transition:
         background-color 0.2s;
@@ -91,6 +91,7 @@ article {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 @keyframes slideInLeft {

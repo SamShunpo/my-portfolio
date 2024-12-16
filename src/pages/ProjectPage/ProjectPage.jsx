@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import './ProjectPage.css';
 import Layout from '../../components/Layout/Layout';
+import Skill from '../../components/Skill/Skill';
 
 function ProjectPage() {
   const { id } = useParams();
@@ -23,10 +24,12 @@ function ProjectPage() {
     <Layout>
       <main>
         <section className="project-details">
-          <h1>{project.title}</h1>
+          <div className='project-page-title'>
+            <h1>{project.title}</h1>
+            <span>{project.tag}</span>
+          </div>
           <img src={project.cover} alt={project.title} className="project-image" />
           <p>{project.description}</p>
-          <span>{project.tag}</span>
           <div className="links">
             {project.demoLink && (
               <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
@@ -38,6 +41,10 @@ function ProjectPage() {
                 SEE ON GITHUB
               </a>
             )}
+          </div>
+          <div className='project-skills'>
+            {project.skills.map(({ cover, name, id }) =>
+              <Skill key={id} cover={cover} name={name} />)}
           </div>
         </section>
       </main>
