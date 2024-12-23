@@ -62,11 +62,11 @@ function Home() {
             <h2>MES REALISATIONS</h2>
             <p>Voici quelques-uns des projets sélectionnés qui témoignent de ma passion pour le développement web.</p>
           </div>
-          {currentProjects.map(({ cover, title, description, tag, id, live_demo_link, github_link, skills }) => (
+          {currentProjects.map(({ title, description, tag, id, live_demo_link, github_link, skills, images }) => (
             <Project
               key={id}
               id={id}
-              cover={cover}
+              images={images}
               title={title}
               description={description}
               tag={tag}
