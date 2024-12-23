@@ -3,7 +3,7 @@ import './Project.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 
-function Project({ cover, title, description, tag, demoLink, githubLink, id, portfolio_skills }) {
+function Project({ title, description, tag, demoLink, githubLink, id, portfolio_skills, images }) {
     const [isVisibleLeft, setIsVisibleLeft] = useState(false);
     const [isVisibleRight, setIsVisibleRight] = useState(false);
 
@@ -32,14 +32,15 @@ function Project({ cover, title, description, tag, demoLink, githubLink, id, por
 
     return (
         <article>
+            <h3 className='mobile-title'>{title}</h3>
             <Link key={id} to={`/project/${id}`} className={`article-left ${isVisibleLeft ? 'visible' : ''}`}
                 ref={articleLeftRef}>
                 <span className='tag'>{tag}</span>
-                <img src={cover} alt="" className='article-image' />
+                <img src={images?.[0]?.image_link || ''} alt="" className='article-image' />
             </Link>
             <div className={`article-right ${isVisibleRight ? 'visible' : ''}`}
                 ref={articleRightRef}>
-                <h3>{title}</h3>
+                <h3 className='desktop-title'>{title}</h3>
                 <p>{description}</p>
                 <div className='project-skills'>
                     {portfolio_skills.map(({ cover, name, id }) =>
@@ -51,7 +52,7 @@ function Project({ cover, title, description, tag, demoLink, githubLink, id, por
                             <a href={demoLink} target="_blank" rel="noopener noreferrer">
                                 LIVE DEMO
                             </a>
-                            <img src="images/arrow-up.svg" alt="image d'une flêche pointant vers le haut" className='link-image' />
+                            <img src="/images/arrow-up.svg" alt="image d'une flêche pointant vers le haut" className='link-image' />
                         </div>
                     )}
                     <div>
@@ -60,7 +61,7 @@ function Project({ cover, title, description, tag, demoLink, githubLink, id, por
                                 <a href={githubLink} target="_blank" rel="noopener noreferrer">
                                     SEE ON GITHUB
                                 </a>
-                                <img src="images/bxl-github.svg" alt="logo de github" className='link-image' />
+                                <img src="/images/bxl-github.svg" alt="logo de github" className='link-image' />
                             </div>
                         )}
                     </div>

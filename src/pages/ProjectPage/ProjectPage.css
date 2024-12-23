@@ -1,7 +1,7 @@
 @import "../../styles/_variable.css";
 
 
-.project-page-main{
+.project-page-main {
     height: calc(100vh - 205px);
     padding-top: 50px;
     gap: 20px;
@@ -10,14 +10,14 @@
 .project-page-main>a {
     transition: all 0.3s ease;
 }
-  
-.project-page-main>a:hover{
+
+.project-page-main>a:hover {
     color: var(--actionColor);
 }
 
 .project-details {
-    height: calc(100vh - 210px);
-    flex-direction: column;
+    min-height: calc(100vh - 210px);
+    gap: 50px;
 }
 
 .project-page-title {
@@ -25,4 +25,77 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+}
+
+.project-page-title>h1 {
+    font-size: 4em;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 49%;
+}
+
+.project-details>.project-skills {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 49%;
+}
+
+.project-images>img {
+    width: 100%;
+    align-self: flex-start;
+}
+
+.image-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.miniature {
+    cursor: pointer;
+    max-width: 20%;
+    border-radius: 8%;
+}
+
+.miniature-selected {
+    cursor: pointer;
+    max-width: 20%;
+    border-radius: 8%;
+    filter: opacity(50%);
+}
+
+.project-middle {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+@media (max-width: 1024px) {
+    .project-images {
+        width: 100%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .project-middle {
+        flex-direction: column;
+    }
+
+    .project-page-title {
+        flex-direction: column;
+    }
 }
