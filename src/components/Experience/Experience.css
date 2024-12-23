@@ -30,3 +30,9 @@
 .article-exp>a:hover {
     border-bottom: solid 1px var(--actionColor);
 }
+
+.type-a {
+    color: var(--actionColor);
+    font-family: var(--textFont);
+    font-size: 1em;
+}

@@ -8,7 +8,9 @@ function Experience({ title, date, id, company, company_link, description }) {
             <h5>{title}</h5>
             <p >{date}</p>
             </div>
-            <a href={company_link}>{company}</a>
+            {company_link ?(
+                <a href={company_link} target="_blank">{company}</a>
+            ): (<span className='type-a'>{company}</span>)}
             <p>{description}</p>
         </article>
 
