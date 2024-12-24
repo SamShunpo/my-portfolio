@@ -36,7 +36,7 @@ function Project({ title, description, tag, demoLink, githubLink, id, portfolio_
             <Link key={id} to={`/project/${id}`} className={`article-left ${isVisibleLeft ? 'visible' : ''}`}
                 ref={articleLeftRef}>
                 <span className='tag'>{tag}</span>
-                <img src={images?.[0]?.image_link || ''} alt="" className='article-image' />
+                <img src={images?.[0]?.image_link || ''} alt={images?.[0]?.alt} className='article-image' />
             </Link>
             <div className={`article-right ${isVisibleRight ? 'visible' : ''}`}
                 ref={articleRightRef}>

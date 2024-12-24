@@ -82,11 +82,11 @@ function ProjectPage() {
                 className="project-image" 
               />
               <div className='image-list'>
-                {project.images?.map(({ image_link, id }) => (
+                {project.images?.map(({ image_link, id, alt }) => (
                   <img 
                     key={id} 
                     src={image_link} 
-                    alt='' 
+                    alt={alt} 
                     className={image_link === selectedImage ? 'miniature-selected' : 'miniature'} 
                     onClick={() => handleClick(image_link)} 
                   />
