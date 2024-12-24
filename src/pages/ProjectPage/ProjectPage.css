@@ -53,6 +53,7 @@
 .project-images>img {
     width: 100%;
     align-self: flex-start;
+    background-color: #3a3a3a;
 }
 
 .image-list {
@@ -66,6 +67,7 @@
     cursor: pointer;
     max-width: 20%;
     border-radius: 8%;
+    background-color: #3a3a3a;
 }
 
 .miniature-selected {
