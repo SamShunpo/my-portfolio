@@ -94,7 +94,7 @@ function ProjectPage() {
               </div>
             </div>
             <div className='project-description'>
-              <p>{project.description}</p>
+              <p>{project.description_long}</p>
               <div className='project-link-container'>
                 {project.live_demo_link && (
                   <div className='project-link'>

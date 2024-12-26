@@ -3,7 +3,7 @@ import './Project.css';
 import { Link } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 
-function Project({ title, description, tag, demoLink, githubLink, id, portfolio_skills, images }) {
+function Project({ title, description_short, tag, demoLink, githubLink, id, portfolio_skills, images }) {
     const [isVisibleLeft, setIsVisibleLeft] = useState(false);
     const [isVisibleRight, setIsVisibleRight] = useState(false);
 
@@ -41,7 +41,7 @@ function Project({ title, description, tag, demoLink, githubLink, id, portfolio_
             <div className={`article-right ${isVisibleRight ? 'visible' : ''}`}
                 ref={articleRightRef}>
                 <h3 className='desktop-title'>{title}</h3>
-                <p>{description}</p>
+                <p>{description_short}</p>
                 <div className='project-skills'>
                     {portfolio_skills.map(({ cover, name, id }) =>
                         <Skill key={id} cover={cover} name={name} />)}
